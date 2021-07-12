@@ -1,0 +1,37 @@
+{
+  "name": "alonso-pablo.github.io",
+  "version": "0.1.0",
+  "description": "Personal Web Page",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alonso-Pablo/Alonso-Pablo.github.io.git"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "framer-motion": "^4.1.17",
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "latest",
+    "babel-preset-minify": "^0.5.1",
+    "eslint": "7.30.0",
+    "eslint-config-next": "11.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/Alonso-Pablo/Alonso-Pablo.github.io/issues"
+  },
+  "keywords": [
+    "Personal_website"
+  ],
+  "homepage": "https://github.com/Alonso-Pablo/Alonso-Pablo.github.io#readme",
+  "author": "Alonso Pablo https://github.com/Alonso-Pablo",
+  "license": "MIT"
+}
