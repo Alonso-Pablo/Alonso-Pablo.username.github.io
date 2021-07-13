@@ -1,0 +1,46 @@
+*,html {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+html {
+  display:block;
+  width:100%;
+  height:100%;
+  min-width:320px;
+  font-size:62.5%;
+  background-color:#000;
+  scroll-behavior:smooth;
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+figure,h1,p,ul {
+  -webkit-margin-before:0;
+  margin-block-start:0;
+  -webkit-margin-after:0;
+  margin-block-end:0;
+  -webkit-margin-start:0;
+  margin-inline-start:0;
+  -webkit-margin-end:0;
+  margin-inline-end:0;
+  -webkit-padding-start:0;
+  padding-inline-start:0;
+}
+
+  #__next {
+    width:100%;
+    height:100%;
+    font-family:Inter;
+    color:#fff;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:active,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:hover {
+    -webkit-box-shadow:inset 0 0 0 30px #000!important;-webkit-text-fill-color:#fff!important
+  }
