@@ -22,7 +22,7 @@ export default function AboutMeSection() {
             <Gray>and lift heavy weight</Gray>
             <br />
             <p>I used to draw and upload it to my account instagram</p>
-            <Gray>More information in the footer :&#41;</Gray>
+            <Gray>More information in the footer.</Gray>
 
           </Article>
 

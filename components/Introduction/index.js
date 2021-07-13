@@ -1,4 +1,4 @@
-import { Section, ResponsiveContainer, AccesibilitySpace, Titles, Name, Description, Details, Nav, Scroll, ScrollAnimated } from './styled'
+import { Section, ResponsiveContainer, Titles, Name, Resume, Details, Nav, Scroll, ScrollAnimated } from './styled'
 import { motion } from 'framer-motion';
 
 export default function Introduction() {
@@ -10,9 +10,9 @@ export default function Introduction() {
 
           <Titles>
 
-            <Name>Alonso<br />Pablo</Name>
+            <Name title="Me :)">Alonso<br />Pablo</Name>
 
-            <Description>Web<br />Developer</Description>
+            <Resume>Web<br />Developer</Resume>
 
           </Titles>
 
@@ -28,20 +28,20 @@ export default function Introduction() {
           <Nav>
             <ul>
               <li>
-                <a href="#Project"><span>Projects</span></a>
+                <a title="Skip to section Project" href="#Project"><span>Projects</span></a>
               </li>
               <li>
-                <a href="#AboutMe"><span>About me</span></a>
+                <a title="Skip to section About Me" href="#AboutMe"><span>About me</span></a>
               </li>
               <li>
-                <a href="#ContactMe"><span>Contact me</span></a>
+                <a title="Skip to section Contact Me" href="#ContactMe"><span>Contact me</span></a>
               </li>
             </ul>
           </Nav>
 
 
 
-          <Scroll>
+          <Scroll title="Scroll Down">
             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="28" viewBox="0 0 10 28" fill="none">
               <rect x="0.5" y="0.5" width="9" height="27" rx="4.5" stroke="white" />
             </svg>
@@ -52,14 +52,13 @@ export default function Introduction() {
                 x: -8,
               },
               visible: {
-                repeat: Infinity,
-                opacity: [0, 0.3, 0.8, 1, 1, 0],
+                opacity: [0, 0.6, 0.8, 1, 0],
                 transition: {
                   repeat: Infinity,
                   duration: 2,
                   ease: [.06, .36, .85, 1.01]
                 },
-                y: [-1, 2, -16],
+                y: [-2, 1, -18],
                 x: -8,
               },
             }}>

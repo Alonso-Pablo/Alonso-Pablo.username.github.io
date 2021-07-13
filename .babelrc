@@ -1,7 +1,6 @@
 {
   "presets": [
-    "next/babel",
-    "minify"
+    "next/babel"
   ],
   "plugins": [
     [

@@ -1,3 +1,5 @@
+export { default as NotFound } from './NotFound';
+
 export { default as Introduction } from './Introduction';
 export { default as ProjectsSection } from './ProjectsSection';
 export { default as AboutMeSection } from './AboutMeSection';

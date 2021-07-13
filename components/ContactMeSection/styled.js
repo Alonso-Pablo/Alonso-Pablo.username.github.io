@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Section = styled.section`
   display: flex;
@@ -17,6 +18,20 @@ export const ResponsiveContainer = styled.div`
   align-items: center;
   flex-direction: column;
 `;
+
+export const MessageSuccesfully = styled(motion.div)`
+  position: -webkit-sticky;
+  position: fixed;
+  top: 1%;
+  width: 80%;
+  background-color: black;
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 20px 0;
+  border-radius: 2px;
+  border: 1px solid #777777;
+  z-index: 9001;
+`
 
 export const Title = styled.h2`
   font-size: 3rem;
@@ -41,28 +56,20 @@ export const Form = styled.form`
 
 export const LabelEmail = styled.label`
   position: absolute;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-size: 1.7rem;
+  background-color: black;
+  padding: 0 2px;
+  border-radius: 2px;
   left: 2%;
   top: -7%;
-  color: white;
-  font-size: 1.8rem;
-  font-weight: 400;
-  font-size: 1.7rem;
-  background-color: black;
-  padding: 0 2px;
-  border-radius: 2px;
 `;
 
-export const LabelMessage = styled.label`
-  position: absolute;
+export const LabelMessage = styled(LabelEmail)`
   left: 1.5%;
   top: 32%;
-  color: white;
-  font-size: 1.8rem;
-  font-weight: 400;
-  font-size: 1.7rem;
-  background-color: black;
-  padding: 0 2px;
-  border-radius: 2px;
 `;
 
 export const InputEmail = styled.input`
@@ -76,36 +83,25 @@ export const InputEmail = styled.input`
   background-color: black;
   border: 1px solid #777777;
   border-radius: 2px;
-  div {
-    color: red;
-  }
-`;
+  `;
 
-export const InputMessage = styled.input`
-  box-sizing: border-box;
-  width: 100%;
+export const InputMessage = styled(InputEmail)`
   height: 50px;
-  padding-left: 20px;
-  margin-bottom: 20px;
-  color: white;
-  font-size: 1.7rem;
-  background-color: black;
-  border: 1px solid #777777;
-  border-radius: 2px;
 `;
 
 export const Send = styled.button`
-  width: 100%;
-  height: 30px;
-  color: white;
-  background-color: black;
-  font-size: 1.8rem;
-  font-weight: 400;
-  border: 1px solid white;
-  border-radius: 2px;
+width: 100%;
+height: 30px;
+color: white;
+background-color: black;
+font-size: 1.8rem;
+font-weight: 400;
+border: 1px solid white;
+border-radius: 2px;
+
   &:hover {
-    background-color: white;
-    border: 1px solid white;
-    color: black;
-  }
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+}
 `;

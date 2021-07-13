@@ -53,9 +53,11 @@ export const Item = styled.li`
   justify-content: space-between;
   align-items: center;
   color: #777777;
+  transition: color 0.8s;
 
   &:hover, &:hover span{
     color: white;
+    transition: color 0.4s;
     cursor: pointer;
   }
 `;
@@ -70,35 +72,46 @@ export const YouTubeIcon = styled.svg`
   flex: 1;
   path:nth-child(1) {
     fill: #4A4A4A;
-    transition-property: all;
-    transition-duration: 0.8s;
+    transition: fill 0.8s;
   }
   &:hover path:nth-child(1) {
     fill: #FF0000;
-    transition-property: all;
-    transition-duration: 0.5s;
+    transition: fill 0.4s;
   }
 `;
 
 export const Div = styled.div`
   position: relative;
+  svg:nth-child(1) {
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.8s;
+    z-index: 2;
+  }
+  &:hover svg:nth-child(1) {
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+
   /* &:hover svg:nth-child(1) {
     display: none;
-    transition-property: all;
-    transition-duration: 4s;
   }
+
   svg:nth-child(2) {
     display: none;
-    transition-property: all;
-    transition-duration: 4s;
   }
+
   &:hover svg:nth-child(2) {
     display: flex;
-    transition-property: all;
-    transition-duration: 4s;
   } */
 `;
 
+
 export const SvgAbsolute = styled.svg`
+  display: flex;
   position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+
 `;

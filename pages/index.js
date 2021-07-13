@@ -4,6 +4,7 @@ import { Introduction, ProjectsSection, AboutMeSection, ContactMeSection, Footer
 export default function Home() {
   return (
     <>
+
       <Introduction />
 
       <ProjectsSection />
