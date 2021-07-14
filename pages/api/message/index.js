@@ -2,7 +2,7 @@
 import db from '../../../db';
 import Model from '../../../model/model';
 
-db(MONGO_URI);
+db(process.env.MONGO_URI);
 
 export default async (req, res) => {
 
