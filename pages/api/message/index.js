@@ -1,9 +1,8 @@
 /* eslint-disable import/no-anonymous-default-export */
 import db from '../../../db';
 import Model from '../../../model/model';
-import config from '../../../config';
 
-db(config.dbUrl);
+db(MONGO_URI);
 
 export default async (req, res) => {
 

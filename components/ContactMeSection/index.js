@@ -24,11 +24,12 @@ export default function ContactMe() {
     7000); // 7 seconds - reset all 
   } // resetSentInfo
 
-  const fetchPostDataMessage = async (url = '', data = {}) => {
+  const fetchPostDataMessage = async (url, data) => {
     const response = await fetch(url, {
       method: 'POST',
       mode: 'cors',
       headers: {
+        'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
