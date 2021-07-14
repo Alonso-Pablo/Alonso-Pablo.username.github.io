@@ -9,7 +9,7 @@
   },
   "scripts": {
     "server": "node server.js",
-    "server:start": "set NODE_ENV=production & cross-env node server.js",
+    "server:start": "cross-env node server.js",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
