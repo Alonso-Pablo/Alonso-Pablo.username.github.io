@@ -33,10 +33,11 @@ export default function ContactMe() {
       "email": `${e.target.email.value}`,
       "message": `${e.target.message.value}`
     }
-    console.log(dataMessage);
 
-    // postMessage()
-    handlerIsSent()
+    postMessage(`https://alonso-pablo-github-io.vercel.app/message`, dataMessage);
+    // postMessage(`http://localhost:3000/message`, dataMessage); DEV
+
+    handlerIsSent();
 
     e.target.email.value = "";
     e.target.message.value = "";
@@ -60,7 +61,7 @@ export default function ContactMe() {
                   duration: 5,
                   ease: [0, .3, .85, .99]
                 },
-                y: [-1, 2, 2, -10],
+                y: [-10, 2, 3, -10],
 
               },
             }}> Your message has been sent successfully. ✔</MessageSuccesfully>

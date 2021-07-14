@@ -24,9 +24,10 @@ export const MessageSuccesfully = styled(motion.div)`
   position: fixed;
   top: 1%;
   width: 80%;
-  background-color: black;
+  background-color: White;
+  color: Black;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
   padding: 20px 0;
   border-radius: 2px;
   border: 1px solid #777777;

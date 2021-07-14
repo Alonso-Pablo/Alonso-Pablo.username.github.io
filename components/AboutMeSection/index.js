@@ -14,7 +14,7 @@ export default function AboutMeSection() {
             <p>I&apos;m autodidactic,</p>
             <Gray>Google is my teacher.</Gray>
             <br />
-            <p>I live in Argentina, Buenos Aires. UTC/GMT -03:00</p>
+            <p>I live in Argentina, Buenos Aires. UTC/GMT (-03:00)</p>
             <br />
             <p>I like make awesome thing with Javascript and other programming languages.</p>
             <br />

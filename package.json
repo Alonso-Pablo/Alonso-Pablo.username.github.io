@@ -2,17 +2,23 @@
   "name": "alonso-pablo.github.io",
   "version": "0.1.0",
   "description": "Personal Web Page",
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Alonso-Pablo/Alonso-Pablo.github.io.git"
   },
   "scripts": {
+    "server": "node server.js",
+    "server:start": "set NODE_ENV=production & cross-env node server.js",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "framer-motion": "^4.1.17",
     "mongoose": "^5.13.2",
     "next": "latest",
