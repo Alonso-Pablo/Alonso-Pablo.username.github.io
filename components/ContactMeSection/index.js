@@ -53,7 +53,7 @@ export default function ContactMe() {
     };
 
     // fetchPostDataMessage(`http://localhost:3000/api/message`, dataMessage) // dev
-    fetchPostDataMessage(`https://alonso-pablo-github-io.vercel.app/api/message`, dataMessage)
+    fetchPostDataMessage(`${process.env.HOST_URL}/api/message`, dataMessage)
       .then(data => {
         
         if (data.error === true) return setSentInfo( sentInfo = 
