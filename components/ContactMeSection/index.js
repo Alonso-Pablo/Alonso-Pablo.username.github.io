@@ -3,17 +3,28 @@ import { Section, ResponsiveContainer, MessageSuccesfully, Title, Gray, Form, La
 
 export default function ContactMe() {
   
-  let [ isSent, setIsSent ] = useState(false);
+  let [ sentInfo, setSentInfo ] = useState(
+    {
+      sending: false,
+      error: false,
+      loading: false,
+      success: false,
+    }
+  );
 
-  const handlerIsSent = () => {
-    setIsSent(isSent = true);
-
+  const resetSentInfo = () => {
     setTimeout(() => {
-      setIsSent(isSent = false);
-    }, 7000)
-  }
+      setSentInfo(sentInfo = {
+        sending: false,
+        error: false,
+        loading: false,
+        success: false
+      });
+    },
+    7000); // 7 seconds - reset all 
+  } // resetSentInfo
 
-  const postMessage = async (url = '', data = {}) => {
+  const fetchPostDataMessage = async (url = '', data = {}) => {
     const response = await fetch(url, {
       method: 'POST',
       mode: 'cors',
@@ -24,33 +35,87 @@ export default function ContactMe() {
     });
 
     return response.json();
-  }
+  } // fetchPostDataMessage
 
   const handleForm = async (e) => {
     e.preventDefault();
-    
+
+    setSentInfo(sentInfo = {
+      ...sentInfo,
+      sending: true,
+      loading: true
+    });
+
     const dataMessage = {
       "email": `${e.target.email.value}`,
       "message": `${e.target.message.value}`
-    }
+    };
 
-    postMessage(`https://alonso-pablo-github-io.vercel.app/message`, dataMessage);
-    // postMessage(`http://localhost:3000/message`, dataMessage); DEV
+    // fetchPostDataMessage(`http://localhost:3000/api/message`, dataMessage) // dev
+    fetchPostDataMessage(`https://alonso-pablo-github-io.vercel.app/api/message`, dataMessage)
+      .then(data => {
+        
+        if (data.error === true) return setSentInfo( sentInfo = 
+          {
+            sending: false,
+            error: true,
+            loading: false,
+            success: false
+          });
+        
+        setSentInfo(sentInfo = {
+          sending: false,
+          error: false,
+          loading: false,
+          success: true
+        });
 
-    handlerIsSent();
+        e.target.email.value = "";
+        e.target.message.value = "";
 
-    e.target.email.value = "";
-    e.target.message.value = "";
-  } 
+        resetSentInfo();
+   
+      })
+      .catch(e => {
+        console.log(e);
+        setSentInfo( sentInfo = {
+          sending: false,
+          error: true,
+          loading: false,
+          success: false
+          });
+
+        resetSentInfo();
+       })
+  } // handleForm
 
   return (
     <>
-      <Section id="ContactMe">
+      <Section>
 
         <ResponsiveContainer>
 
-          { isSent && 
-          <MessageSuccesfully aria-live="assertive" initial="hidden" animate="visible" variants={{
+          { sentInfo.success
+            ? <MessageSuccesfully aria-live="assertive" initial="hidden" animate="visible" variants={{
+              hidden: { opacity: 0,
+                y: -4,
+              },
+              visible: {
+                opacity: [0.4, 1, 1, 0],
+                transition: {
+                  duration: 6,
+                  ease: [0, .3, .85, .99]
+                },
+                y: [-10, 2, 3, -10],
+
+              }, }}>
+               Your message has been sent successfully. ✔
+            </MessageSuccesfully>
+            : <> </>
+          }
+
+          { sentInfo.error
+             ? <MessageSuccesfully aria-live="assertive" initial="hidden" animate="visible" variants={{
               hidden: {
                 opacity: 0,
                 y: -4,
@@ -63,8 +128,10 @@ export default function ContactMe() {
                 },
                 y: [-10, 2, 3, -10],
 
-              },
-            }}> Your message has been sent successfully. ✔</MessageSuccesfully>
+              }, }}>
+                Bad Request. ❌
+            </MessageSuccesfully>
+              : <> </> 
           }
           
 
