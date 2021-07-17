@@ -25,7 +25,7 @@ export const Title = styled.h1`
   font-size: ${({theme}) => theme.title.fontSize };
   font-weight: ${({theme}) => theme.title.fontWeight };
   line-height: ${({theme}) => theme.title.lineHeight };
-  margin-top: 80px;
+
 `;
 
 
