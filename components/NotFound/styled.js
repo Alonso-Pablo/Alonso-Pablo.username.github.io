@@ -19,9 +19,12 @@ export const ResponsiveContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 5.5rem;
-  line-height: 80%;
-  margin-bottom: 10px;
+  color: ${({theme}) => theme.title.fontColor };
+  font-family: ${({theme}) => theme.title.fontFamily };
+  font-size: ${({theme}) => theme.title.fontSize };
+  font-weight: ${({theme}) => theme.title.fontWeight };
+  line-height: ${({theme}) => theme.title.lineHeight };
+  margin-top: 80px;
 `;
 
 export const Details = styled.h2`

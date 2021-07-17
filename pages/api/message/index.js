@@ -8,7 +8,6 @@ export default async (req, res) => {
 
   if (req.method === 'POST') {
     try {
-
       const fullMessage = {
         ...req.body,
         date: new Date(),
@@ -31,9 +30,9 @@ export default async (req, res) => {
 
   } else {
     res.status(400).send({
-      "error": "Bad request",
+      "error": "You shall not pass",
       "success": false
     });
   };
-  
+
 };

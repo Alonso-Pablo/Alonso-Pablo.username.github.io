@@ -39,7 +39,7 @@ export default function ThemeTogglerButton() {
         onTap={handleTap} >
         
         
-        <motion.circle cx="15" cy="14" r="9" fill="#777777"
+        <motion.circle cx="15" cy="14" r="9" fill="#000000"
           variants={Moon} animate="show"/>
 
         <motion.circle  cx="15" cy="14" r="9" fill="white"

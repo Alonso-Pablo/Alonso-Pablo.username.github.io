@@ -2,7 +2,7 @@ import { Introduction, SectionResponsiveContainer, ProjectsSection, AboutMeSecti
 
 import useWindowSize from '../Hooks/useWindowSize';
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import ThemeTogglerButton from '../components/ThemeTogglerButton'
 import styled, { ThemeProvider } from "styled-components";
 import { GlobalStyles, darkTheme, lightTheme } from "../styles/GlobalStyle"
@@ -20,8 +20,6 @@ export default function Home() {
 
   const { width } = useWindowSize()
 
-  useEffect(() => {
-
     if (width > 768 ) {
     darkTheme.title.fontSize = '8.5rem';
     lightTheme.title.fontSize = '8.5rem';
@@ -38,8 +36,22 @@ export default function Home() {
     darkTheme.titlesection.fontSize = '4rem';
     lightTheme.titlesection.fontSize = '4rem';
     
+  } else {
+    darkTheme.title.fontSize = '5.5rem';
+    lightTheme.title.fontSize = '5.5rem';
+    
+    darkTheme.subtitle.fontSize = '2rem';
+    lightTheme.subtitle.fontSize = '2rem';
+
+    darkTheme.details.fontSize = '1.8rem';
+    lightTheme.details.fontSize = '1.8rem';
+
+    darkTheme.linka.fontSize = '2.5rem';
+    lightTheme.linka.fontSize = '2.5rem';
+
+    darkTheme.titlesection.fontSize = '3rem';
+    lightTheme.titlesection.fontSize = '3rem';
   }
-  }, [width])
 
   const [theme, setTheme] = useState('dark');
 
@@ -49,7 +61,6 @@ export default function Home() {
 
   return (
     <>
-
       <ThemeProvider theme={ theme === 'light' ? lightTheme : darkTheme  }>
         <GlobalStyles />
         
