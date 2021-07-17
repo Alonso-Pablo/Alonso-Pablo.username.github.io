@@ -1,34 +1,33 @@
-import { Section, ResponsiveContainer, Title, Article, Gray } from './styled';
+import { Section, ResponsiveContainer, TitleSection, Article, Br, Paragraph, ParagraphGray } from './styled';
 
 export default function AboutMeSection() {
   return (
     <>
-      <Section id="AboutMe">
+      <TitleSection>About me</TitleSection>
 
-        <ResponsiveContainer>
+      <Article>
+        
 
-          <Title>About me</Title>
+        <div>
+          <Paragraph>I live in Argentina, Buenos Aires. UTC/GMT (-03:00)</Paragraph>
+        </div>
+        <Br>
+          <Paragraph>I like make awesome thing with Javascript and other programming languages.</Paragraph>
+        </Br>
+        <Br>
+          <Paragraph>I never stop learging new thing,</Paragraph>
+          <ParagraphGray>Platzi, Medium, Stack Overflow and Documentation.</ParagraphGray>
+        </Br>
+        <Br>
+          <Paragraph>I love going to the gym</Paragraph>
+          <ParagraphGray>and lift heavy weight</ParagraphGray>
+        </Br>
+        <Br>
+          <Paragraph>I used to draw and upload it to my account instagram</Paragraph>
+          <ParagraphGray>More information in the footer...</ParagraphGray>
+        </Br>
 
-          <Article>
-
-            <p>I&apos;m autodidactic,</p>
-            <Gray>Google is my teacher.</Gray>
-            <br />
-            <p>I live in Argentina, Buenos Aires. UTC/GMT (-03:00)</p>
-            <br />
-            <p>I like make awesome thing with Javascript and other programming languages.</p>
-            <br />
-            <p>I love going to the gym</p>
-            <Gray>and lift heavy weight</Gray>
-            <br />
-            <p>I used to draw and upload it to my account instagram</p>
-            <Gray>More information in the footer.</Gray>
-
-          </Article>
-
-        </ResponsiveContainer>
-
-      </Section>
+      </Article>
     </>
   )
 }

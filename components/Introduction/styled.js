@@ -18,39 +18,51 @@ export const ResponsiveContainer = styled.div`
   justify-content: space-around;
 `;
 
-export const Titles = styled.section`
-  margin-top: 10px;
+export const Title = styled.h1`
+
+  color: ${({theme}) => theme.title.fontColor };
+  font-family: ${({theme}) => theme.title.fontFamily };
+  font-size: ${({theme}) => theme.title.fontSize };
+  font-weight: ${({theme}) => theme.title.fontWeight };
+  line-height: ${({theme}) => theme.title.lineHeight };
+  margin-top: 80px;
+`;
+
+
+export const SubTitle = styled.h2`
+
+  color: ${({theme}) => theme.subtitle.fontColor };
+  font-family: ${({theme}) => theme.subtitle.fontFamily };
+  font-size: ${({theme}) => theme.subtitle.fontSize };
+  font-weight: ${({theme}) => theme.subtitle.fontWeight };
+  line-height: ${({theme}) => theme.subtitle.lineHeight };
+
+  margin-left: 0.5%;
   margin-bottom: 30px;
 `;
 
-export const Name = styled.h1`
-  font-size: 5.5rem;
-  line-height: 80%;
-  margin-bottom: 10px;
-`;
 
-export const Resume = styled.h2`
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 90%;
-  margin-left: 0.5%;
-`;
-
-export const Details = styled.div`
+export const ContainerDetails = styled.div`
   display: flex;
   justify-content: center;
-  color: #777777;
-  font-size: 1.8rem;
-  font-weight: 900;
-  line-height: 100%;
+`;
+
+
+export const Details = styled.span`
+
+  color: ${({theme}) => theme.fontColorTwo };
+  font-family: ${({theme}) => theme.details.fontFamily };
+  font-size: ${({theme}) => theme.details.fontSize };
+  font-weight: ${({theme}) => theme.details.fontWeight };
+  line-height: ${({theme}) => theme.details.lineHeight };
+
   margin-bottom: 30px;
 `;
+
 
 export const Nav = styled.nav`
   display: flex;
   justify-content: flex-end;
-  font-size: 2.5rem;
-  font-weight: 900;
   text-align: end;
   margin-bottom: 40px;
 
@@ -59,7 +71,28 @@ export const Nav = styled.nav`
   }
 `;
 
-export const Scroll = styled.div`
+
+export const LinkA = styled.a`
+
+  color: ${({theme}) => theme.linka.fontColor };
+  font-family: ${({theme}) => theme.linka.fontFamily };
+  font-size: ${({theme}) => theme.linka.fontSize };
+  font-weight: ${({theme}) => theme.linka.fontWeight };
+  line-height: ${({theme}) => theme.linka.lineHeight };
+`;
+
+
+export const ContainerSvg = styled.div`
+  position: relative;
+  width: calc(50% + 5px);
+  display: flex;
+  align-self: flex-end;
+  justify-content: space-between;
+  right: 0;
+`;
+
+
+export const ScrollIt = styled.div`
   position: relative;
   display: flex;
   width: 10px;
@@ -67,6 +100,7 @@ export const Scroll = styled.div`
   justify-content: center;
   margin-bottom: 40px;
 `;
+
 
 export const ScrollAnimated = styled.span`
   position: absolute;
@@ -76,7 +110,5 @@ export const ScrollAnimated = styled.span`
   top: 70%;
   left: 20%;
   border-radius: 100%;
-  background-color: white;
-
-
+  background-color: ${({theme}) => theme.firstColor};
 `;

@@ -6,9 +6,8 @@ export const Section = styled.section`
   width: 100%;
   justify-content: center;
   margin: 0 auto;
-  padding-top: 80px;
-  border-top: 1px solid #4A4A4A;
   padding-bottom: 80px;
+  border-top: 1px solid ${({theme}) => theme.fourthColor };
 `;
 
 export const ResponsiveContainer = styled.div`
@@ -19,32 +18,48 @@ export const ResponsiveContainer = styled.div`
   flex-direction: column;
 `;
 
-export const MessageSuccesfully = styled(motion.div)`
+export const ContainerMessage = styled(motion.div)`
   position: -webkit-sticky;
   position: fixed;
   top: 1%;
   width: 80%;
-  background-color: White;
-  color: Black;
+  background-color: ${({theme}) => theme.firstColor };
   text-align: center;
-  font-size: 2rem;
   padding: 20px 0;
+  border: 1px solid ${({theme}) => theme.fourthColor };
   border-radius: 2px;
-  border: 1px solid #777777;
   z-index: 9001;
-`
-
-export const Title = styled.h2`
-  font-size: 3rem;
-  font-weight: 900;
-  text-align: center;
 `;
 
-export const Gray = styled.p`
-  color: #777777;
-  margin-bottom: 50px;
-  font-size: 1.8rem;
-  font-weight: 900;
+export const Message = styled.span`
+
+  color: ${({theme}) => theme.fontColorThree };
+  font-family: ${({theme}) => theme.paragraph.fontFamily };
+  font-size: ${({theme}) => theme.paragraph.fontSize };
+  font-weight: ${({theme}) => theme.paragraph.fontWeight };
+  line-height: ${({theme}) => theme.paragraph.lineHeight };
+`;
+
+export const TitleSection = styled.h2`
+
+  color: ${({theme}) => theme.titlesection.fontColor };
+  font-family: ${({theme}) => theme.titlesection.fontFamily };
+  font-size: ${({theme}) => theme.titlesection.fontSize };
+  font-weight: ${({theme}) => theme.titlesection.fontWeight };
+  line-height: ${({theme}) => theme.titlesection.lineHeight };
+
+  margin-top: 80px;
+`;
+
+export const Details = styled.span`
+
+  color: ${({theme}) => theme.fontColorTwo };
+  font-family: ${({theme}) => theme.details.fontFamily };
+  font-size: ${({theme}) => theme.details.fontSize };
+  font-weight: ${({theme}) => theme.details.fontWeight };
+  line-height: ${({theme}) => theme.details.lineHeight };
+
+  margin-bottom: 30px;
 `;
 
 export const Form = styled.form`
@@ -56,20 +71,22 @@ export const Form = styled.form`
 `;
 
 export const LabelEmail = styled.label`
+
+  color: ${({theme}) => theme.label.fontColor };
+  font-family: ${({theme}) => theme.label.fontFamily };
+  font-size: ${({theme}) => theme.label.fontSize };
+  font-weight: ${({theme}) => theme.label.fontWeight };
+  line-height: ${({theme}) => theme.label.lineHeight };
+
   position: absolute;
-  color: white;
-  font-size: 1.8rem;
-  font-weight: 400;
-  font-size: 1.7rem;
-  background-color: black;
+  background-color: ${({theme}) => theme.secondColor };
   padding: 0 2px;
   border-radius: 2px;
-  left: 2%;
+  left: 5px;
   top: -7%;
 `;
 
 export const LabelMessage = styled(LabelEmail)`
-  left: 1.5%;
   top: 32%;
 `;
 
@@ -81,8 +98,8 @@ export const InputEmail = styled.input`
   margin-bottom: 20px;
   color: white;
   font-size: 1.7rem;
-  background-color: black;
-  border: 1px solid #777777;
+  background-color: ${({theme}) => theme.secondColor };
+  border: 1px solid ${({theme}) => theme.thirdColor };
   border-radius: 2px;
   `;
 
@@ -91,18 +108,28 @@ export const InputMessage = styled(InputEmail)`
 `;
 
 export const Send = styled.button`
-width: 100%;
-height: 30px;
-color: white;
-background-color: black;
-font-size: 1.8rem;
-font-weight: 400;
-border: 1px solid white;
-border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  background-color: ${({theme}) => theme.background };
+  border: 1px solid ${({theme}) => theme.firstColor };
+  border-radius: 2px;
+  cursor: pointer;
 
   &:hover {
-  background-color: white;
-  border: 1px solid white;
-  color: black;
+  background-color: ${({theme}) => theme.firstColor };
+  border: 1px solid ${({theme}) => theme.firstColor };
 }
+
+ &:hover span {
+  color: ${({theme}) => theme.fontColorThree };
+ }
+`;
+
+export const ButtonText = styled.span`
+
+  color: ${({theme}) => theme.buttontext.fontColor };
+  font-family: ${({theme}) => theme.buttontext.fontFamily };
+  font-size: ${({theme}) => theme.buttontext.fontSize };
+  font-weight: ${({theme}) => theme.buttontext.fontWeight };
+  line-height: ${({theme}) => theme.buttontext.lineHeight };
 `;

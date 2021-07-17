@@ -5,7 +5,7 @@ export const Section = styled.section`
   display: flex;
   justify-content: center;
   padding-bottom: 60px;
-  border-top: 1px solid #4A4A4A;
+  border-top: 1px solid ${({theme}) => theme.fourthColor };
 `;
 
 export const ResponsiveContainer = styled.div`
@@ -16,20 +16,40 @@ export const ResponsiveContainer = styled.div`
   flex-direction: column;
 `;
 
-export const Title = styled.h2`
+export const TitleSection = styled.h2`
+
+  color: ${({theme}) => theme.titlesection.fontColor };
+  font-family: ${({theme}) => theme.titlesection.fontFamily };
+  font-size: ${({theme}) => theme.titlesection.fontSize };
+  font-weight: ${({theme}) => theme.titlesection.fontWeight };
+  line-height: ${({theme}) => theme.titlesection.lineHeight };
+
   margin-top: 80px;
   margin-bottom: 50px;
-  font-size: 3rem;
-  font-weight: 900;
-  text-align: center;
 `;
 
 export const Article = styled.article`
   width: 100%;
-  font-size: 1.7rem;
-  font-weight: 400;
 `;
 
-export const Gray = styled.p`
-  color: #777777
+export const Br = styled.div`
+  margin-top: 20px;
+`;
+
+export const Paragraph = styled.p`
+
+  color: ${({theme}) => theme.paragraph.fontColor };
+  font-family: ${({theme}) => theme.paragraph.fontFamily };
+  font-size: ${({theme}) => theme.paragraph.fontSize };
+  font-weight: ${({theme}) => theme.paragraph.fontWeight };
+  line-height: ${({theme}) => theme.paragraph.lineHeight };
+`;
+
+export const ParagraphGray = styled.p`
+
+  color: ${({theme}) => theme.fontColorTwo };
+  font-family: ${({theme}) => theme.paragraph.fontFamily };
+  font-size: ${({theme}) => theme.paragraph.fontSize };
+  font-weight: ${({theme}) => theme.paragraph.fontWeight };
+  line-height: ${({theme}) => theme.paragraph.lineHeight };
 `;

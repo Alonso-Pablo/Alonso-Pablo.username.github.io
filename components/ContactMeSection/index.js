@@ -1,8 +1,22 @@
 import { useState } from 'react';
-import { Section, ResponsiveContainer, MessageSuccesfully, Title, Gray, Form, LabelEmail, LabelMessage, InputEmail, InputMessage, Send } from './styled';
+import { Section, ResponsiveContainer, ContainerMessage, Message, TitleSection, Details, Form, LabelEmail, LabelMessage, InputEmail, InputMessage, Send, ButtonText } from './styled';
 
 export default function ContactMe() {
   
+  const alertMessage = {
+    hidden: { opacity: 0,
+      y: -4,
+    },
+    visible: {
+      opacity: [0.4, 1, 1, 0],
+      transition: {
+        duration: 5,
+        ease: [0, .3, .85, .99]
+      },
+      y: [-10, 2, 3, -10],
+
+    }, };
+
   let [ sentInfo, setSentInfo ] = useState(
     {
       sending: false,
@@ -87,85 +101,56 @@ export default function ContactMe() {
           });
 
         resetSentInfo();
+
        })
   } // handleForm
 
   return (
     <>
-      <Section>
+      { sentInfo.success
+        ? <ContainerMessage aria-live="assertive" initial="hidden" animate="visible" variants={alertMessage}>
+            <Message>Your message has been sent successfully. ✔</Message>
+        </ContainerMessage>
+        : <> </>
+      }
 
-        <ResponsiveContainer>
-
-          { sentInfo.success
-            ? <MessageSuccesfully aria-live="assertive" initial="hidden" animate="visible" variants={{
-              hidden: { opacity: 0,
-                y: -4,
-              },
-              visible: {
-                opacity: [0.4, 1, 1, 0],
-                transition: {
-                  duration: 6,
-                  ease: [0, .3, .85, .99]
-                },
-                y: [-10, 2, 3, -10],
-
-              }, }}>
-               Your message has been sent successfully. ✔
-            </MessageSuccesfully>
-            : <> </>
-          }
-
-          { sentInfo.error
-             ? <MessageSuccesfully aria-live="assertive" initial="hidden" animate="visible" variants={{
-              hidden: {
-                opacity: 0,
-                y: -4,
-              },
-              visible: {
-                opacity: [0.4, 1, 1, 0],
-                transition: {
-                  duration: 5,
-                  ease: [0, .3, .85, .99]
-                },
-                y: [-10, 2, 3, -10],
-
-              }, }}>
-                Bad Request. ❌
-            </MessageSuccesfully>
-              : <> </> 
-          }
-          
-
-          <Title primary>Contact me</Title>
-          <Gray>or leave me a message<br/>after the tone: tuuu...</Gray>
+      { sentInfo.error
+          ? <ContainerMessage aria-live="assertive" initial="hidden" animate="visible" variants={alertMessage}>
+            <Message>Bad Request. ❌</Message>
+        </ContainerMessage>
+          : <> </> 
+      }
 
 
-          <Form onSubmit={handleForm}>
-            <LabelEmail htmlFor="email" >Email</LabelEmail>
-            <InputEmail
-            aria-label="email"
-            aria-required
-            required
-            type="email"
-            autoComplete="email"
-            id="email"
-            placeholder="example@example.com" />
+      <TitleSection>Contact me</TitleSection>
+      <Details title="uuuu... are you done?">or leave me a message<br/>after the tone: tuuu...</Details>
 
-            <LabelMessage htmlFor="message" >Message</LabelMessage>
-            <InputMessage
-            aria-label="message"
-            aria-required
-            required
-            type="text"
-            id="message"
-            placeholder="Once Upon a time..." />
 
-            <Send type="submit">Send</Send>
-          </Form>
+      <Form onSubmit={handleForm}>
+        <LabelEmail htmlFor="email" >Email</LabelEmail>
+        <InputEmail
+        aria-label="email"
+        aria-required
+        required
+        type="email"
+        autoComplete="email"
+        id="email"
+        placeholder="example@example.com" />
 
-        </ResponsiveContainer>
+        <LabelMessage htmlFor="message">Message</LabelMessage>
+        <InputMessage
+        aria-label="message"
+        aria-required
+        required
+        type="text"
+        id="message"
+        placeholder="Once Upon a time..." />
 
-      </Section>
+        <Send type="submit">
+          <ButtonText>Send</ButtonText>
+        </Send>
+
+      </Form>
     </>
   )
 }

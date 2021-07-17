@@ -5,7 +5,7 @@ export const Footer = styled.footer`
   width: 100%;
   justify-content: center;
   padding-top: 15px;
-  border-top: 1px solid #4A4A4A;
+  border-top: 1px solid ${({theme}) => theme.fourthColor };
 `;
 
 export const ResponsiveContainer = styled.div`
@@ -25,23 +25,29 @@ export const List = styled.ul`
 `;
 
 export const A = styled.a`
+  will-change: color;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+
   & svg, & svg path {
-  fill: #777777;
+  will-change: fill;
+  fill: ${({theme}) => theme.thirdColor };
   }
 
-  &:hover svg path,&:hover span {
-    color: white;
-    fill: white;
+  &:hover svg path, &:hover p {
+    color: ${({theme}) => theme.firstColor };
+    fill: ${({theme}) => theme.firstColor };
   }
 `;
 
-export const Description = styled.span`
-  color: #777777;
-  font-size: 1.8rem;
+export const ParagraphGray = styled.p`
+ color: ${({theme}) => theme.fontColorTwo };
+  font-family: ${({theme}) => theme.paragraph.fontFamily };
+  font-size: ${({theme}) => theme.paragraph.fontSize };
+  font-weight: ${({theme}) => theme.paragraph.fontWeight };
+  line-height: ${({theme}) => theme.paragraph.lineHeight };
   margin-top: 5px;
 `;
 
@@ -50,8 +56,15 @@ export const Bottom = styled.div`
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
-  color: #777777;
-  font-size: 1.7rem;
-  padding: 15px 0;
+  padding-top: 15px;
+`;
 
+export const Detail = styled.span`
+  color: ${({theme}) => theme.fontColorTwo };
+  font-family: ${({theme}) => theme.details.fontFamily };
+  font-size: ${({theme}) => theme.details.fontSize };
+  font-weight: ${({theme}) => theme.details.fontWeight };
+  line-height: ${({theme}) => theme.details.lineHeight };
+
+  margin-bottom: 30px;
 `;
