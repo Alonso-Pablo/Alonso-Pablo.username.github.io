@@ -40,7 +40,13 @@ export default function ContactMe() {
           </List>
 
           <Bottom>
-            <Detail>Made with 🖤 by Alonso Pablo </Detail>
+            <Detail>
+              Made with &nbsp;
+              <svg title="love" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 18 17" fill="none">
+                <path d="M1 4.00001C-0.722772 8.02011 4 11 9.00008 16.0003C14 11 18.7138 8 17.0002 4.00031C15.5001 0.499024 10.5001 0.49992 9.00008 4.00016C7.49997 0.498874 2.49999 0.499769 1 4.00001Z" fill="#777777"/>
+              </svg>
+              &nbsp; by Alonso Pablo
+            </Detail>
             <Detail>2021</Detail>
           </Bottom>
 

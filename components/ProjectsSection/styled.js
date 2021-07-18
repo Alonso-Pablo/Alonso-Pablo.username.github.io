@@ -1,21 +1,5 @@
 import styled from 'styled-components';
 
-export const Section = styled.section`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 80px;
-  border-top: 1px solid #4A4A4A;
-`;
-
-export const ResponsiveContainer = styled.div`
-  width: 80%;
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
 
 export const TitleSection = styled.h2`
 
@@ -35,7 +19,7 @@ export const Article = styled.article`
   width: 100%;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #4A4A4A;
+  border: 1px solid ${({theme}) => theme.boderColor };
   border-radius: 4px;
   padding-top: 10px;
   padding-bottom: 30px;
@@ -65,17 +49,12 @@ export const Item = styled.li`
   align-items: center;
   transition: color 0.8s;
   will-change: color;
-
-  &:hover, &:hover span{
-    color: ${({theme}) => theme.firstColor };
-    transition: color 0.4s;
-    cursor: pointer;
-  }
+  cursor: pointer;
 `;
 
 export const ItemTitle = styled.span`
 
-  color: ${({theme}) => theme.fontColortwo };
+  color: ${({theme}) => theme.itemtitle.fontColor };
   font-family: ${({theme}) => theme.itemtitle.fontFamily };
   font-size: ${({theme}) => theme.itemtitle.fontSize };
   font-weight: ${({theme}) => theme.itemtitle.fontWeight };

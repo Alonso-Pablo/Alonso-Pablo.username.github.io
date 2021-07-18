@@ -1,22 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const Section = styled.section`
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin: 0 auto;
-  padding-bottom: 80px;
-  border-top: 1px solid ${({theme}) => theme.fourthColor };
-`;
-
-export const ResponsiveContainer = styled.div`
-  display: flex;
-  width: 80%;
-  max-width: 800px;
-  align-items: center;
-  flex-direction: column;
-`;
 
 export const ContainerMessage = styled(motion.div)`
   position: -webkit-sticky;
@@ -121,7 +105,7 @@ export const Send = styled.button`
 }
 
  &:hover span {
-  color: ${({theme}) => theme.fontColorThree };
+  color: ${({theme}) => theme.message.fontColor };
  }
 `;
 

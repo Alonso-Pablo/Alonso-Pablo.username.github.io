@@ -5,7 +5,7 @@ export const Footer = styled.footer`
   width: 100%;
   justify-content: center;
   padding-top: 15px;
-  border-top: 1px solid ${({theme}) => theme.fourthColor };
+  border-top: 1px solid ${({theme}) => theme.boderColor };
 `;
 
 export const ResponsiveContainer = styled.div`
@@ -62,7 +62,7 @@ export const Bottom = styled.div`
 export const Detail = styled.span`
   color: ${({theme}) => theme.fontColorTwo };
   font-family: ${({theme}) => theme.details.fontFamily };
-  font-size: ${({theme}) => theme.details.fontSize };
+  font-size: ${({theme}) => theme.message.fontSize };
   font-weight: ${({theme}) => theme.details.fontWeight };
   line-height: ${({theme}) => theme.details.lineHeight };
 

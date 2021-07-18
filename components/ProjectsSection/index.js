@@ -1,4 +1,4 @@
-import { Section, ResponsiveContainer, TitleSection, Article, Subtitle, Container, Item, ItemTitle, YouTubeIcon, Div, SvgAbsolute } from './styled';
+import { TitleSection, Article, Subtitle, Container, Item, ItemTitle, YouTubeIcon, Div, SvgAbsolute } from './styled';
 
 export default function ProjectsSection() {
 

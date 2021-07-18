@@ -6,6 +6,7 @@ export const primaryColor = '#FFFFFF';
 export const secondaryColor = '#000000';
 export const tertiaryColor = '#777777';
 export const quaternaryColor = '#4A4A4A';
+export const quinaryColor = '#BBBBBB';
 
 export const lightTheme = {
   firstColor: secondaryColor,
@@ -14,6 +15,8 @@ export const lightTheme = {
   fourthColor: quaternaryColor,
 
   background: primaryColor,
+  boderColor: quinaryColor,
+
   fontColor: secondaryColor,
   fontColorTwo: tertiaryColor,
   fontColorThree: secondaryColor,
@@ -101,13 +104,15 @@ export const darkTheme = {
   secondColor: secondaryColor,
   thirdColor: tertiaryColor,
   fourthColor: quaternaryColor,
-
+  
   background: secondaryColor,
+  boderColor: quaternaryColor,
+
   fontColor: primaryColor,
   fontColorTwo: tertiaryColor,
   fontColorThree: secondaryColor,
   fontFamily: mainFontFamily,
-
+  
   title: {
     fontColor: primaryColor,
     fontFamily: mainFontFamily,

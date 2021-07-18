@@ -1,4 +1,4 @@
-import { Introduction, SectionResponsiveContainer, ProjectsSection, AboutMeSection, ContactMeSection, Footer } from '../components'
+import { Introduction, SectionResponsiveContainer, ProjectsSection, TitleSection, AboutMeSection, ContactMeSection, Footer } from '../components'
 
 import useWindowSize from '../Hooks/useWindowSize';
 
@@ -63,12 +63,13 @@ export default function Home() {
     <>
       <ThemeProvider theme={ theme === 'light' ? lightTheme : darkTheme  }>
         <GlobalStyles />
-        
+
         <Introduction>
             <Button title="Change the theme" onClick={() => themeToggler()}>
               <ThemeTogglerButton/>
             </Button>
         </Introduction>
+
 
         <SectionResponsiveContainer id="project">
           <ProjectsSection />
@@ -84,9 +85,10 @@ export default function Home() {
           <ContactMeSection />
         </SectionResponsiveContainer>
 
+
         <Footer />
 
-        </ThemeProvider>
+      </ThemeProvider>
     </>
   )
 }

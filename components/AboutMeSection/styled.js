@@ -1,21 +1,5 @@
 import styled from 'styled-components';
 
-export const Section = styled.section`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 60px;
-  border-top: 1px solid ${({theme}) => theme.fourthColor };
-`;
-
-export const ResponsiveContainer = styled.div`
-  width: 80%;
-  max-width: 800px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-`;
-
 export const TitleSection = styled.h2`
 
   color: ${({theme}) => theme.titlesection.fontColor };

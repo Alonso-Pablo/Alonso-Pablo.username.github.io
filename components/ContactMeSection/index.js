@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Section, ResponsiveContainer, ContainerMessage, Message, TitleSection, Details, Form, LabelEmail, LabelMessage, InputEmail, InputMessage, Send, ButtonText } from './styled';
+import { ContainerMessage, Message, TitleSection, Details, Form, LabelEmail, LabelMessage, InputEmail, InputMessage, Send, ButtonText } from './styled';
 
 export default function ContactMe() {
   
@@ -120,9 +120,8 @@ export default function ContactMe() {
         </ContainerMessage>
           : <> </> 
       }
-
-
       <TitleSection>Contact me</TitleSection>
+
       <Details title="uuuu... are you done?">or leave me a message<br/>after the tone: tuuu...</Details>
 
 

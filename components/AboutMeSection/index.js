@@ -1,4 +1,4 @@
-import { Section, ResponsiveContainer, TitleSection, Article, Br, Paragraph, ParagraphGray } from './styled';
+import { TitleSection, Article, Br, Paragraph, ParagraphGray } from './styled';
 
 export default function AboutMeSection() {
   return (
