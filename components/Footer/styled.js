@@ -5,7 +5,7 @@ export const Footer = styled.footer`
   width: 100%;
   justify-content: center;
   padding-top: 15px;
-  border-top: 1px solid ${({theme}) => theme.boderColor };
+  border-top: 1px solid ${({theme}) => theme.borderColor };
 `;
 
 export const ResponsiveContainer = styled.div`

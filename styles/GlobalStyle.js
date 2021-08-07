@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 export const mainFontFamily = 'Inter';
 
@@ -15,7 +15,7 @@ export const lightTheme = {
   fourthColor: quaternaryColor,
 
   background: primaryColor,
-  boderColor: quinaryColor,
+  borderColor: quinaryColor,
 
   fontColor: secondaryColor,
   fontColorTwo: tertiaryColor,
@@ -62,7 +62,7 @@ export const lightTheme = {
     fontFamily: mainFontFamily,
     fontSize: '1.7rem',
     fontWeight: 400,
-    lineHeight: '90%',
+    lineHeight: '120%',
   },
   paragraph: {
     fontColor: secondaryColor,
@@ -106,7 +106,7 @@ export const darkTheme = {
   fourthColor: quaternaryColor,
   
   background: secondaryColor,
-  boderColor: quaternaryColor,
+  borderColor: quaternaryColor,
 
   fontColor: primaryColor,
   fontColorTwo: tertiaryColor,
@@ -153,7 +153,7 @@ export const darkTheme = {
     fontFamily: mainFontFamily,
     fontSize: '1.7rem',
     fontWeight: 400,
-    lineHeight: '90%',
+    lineHeight: '120%',
   },
   paragraph: {
     fontColor: primaryColor,

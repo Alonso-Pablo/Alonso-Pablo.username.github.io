@@ -10,7 +10,6 @@ export const TitleSection = styled.h2`
   line-height: ${({theme}) => theme.titlesection.lineHeight };
 
   margin-top: 80px;
-  margin-bottom: 50px;
 `;
 
 
@@ -19,7 +18,8 @@ export const Article = styled.article`
   width: 100%;
   flex-direction: column;
   align-items: center;
-  border: 1px solid ${({theme}) => theme.boderColor };
+  margin-top: 50px;
+  border: 1px solid ${({theme}) => theme.borderColor };
   border-radius: 4px;
   padding-top: 10px;
   padding-bottom: 30px;
@@ -42,8 +42,9 @@ export const Container = styled.ul`
   justify-content: space-evenly;
 `;
 
-export const Item = styled.li`
+export const Item = styled.a`
   display: flex;
+  height: 100%;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -59,7 +60,7 @@ export const ItemTitle = styled.span`
   font-size: ${({theme}) => theme.itemtitle.fontSize };
   font-weight: ${({theme}) => theme.itemtitle.fontWeight };
   line-height: ${({theme}) => theme.itemtitle.lineHeight };
-
+  text-align: center;
   padding-top: 10px;
 `;
 
