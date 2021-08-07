@@ -5,7 +5,7 @@ GitHub | Vercel
  Alonso-Pablo.github.io | https://alonso-pablo.vercel.app/
 
 ## 👁 Preview:
-![Portfolio - preview](https://github.com/Alonso-Pablo/Alonso-Pablo.github.io/tree/main/public/preview.png)
+![Portfolio - preview](https://github.com/Alonso-Pablo/Alonso-Pablo.github.io/blob/main/public/preview.png)
 
 ## 🪑 To Do:
 * Custom Scroll
