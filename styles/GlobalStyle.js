@@ -94,6 +94,7 @@ export const lightTheme = {
   }
 }
 
+// Guide
 // primaryColor = '#FFFFFF'; white
 // secondaryColor = '#000000'; black
 // tertiaryColor = '#777777'; gray
@@ -190,6 +191,7 @@ export const GlobalStyles = createGlobalStyle`
     list-style:none;
     margin:0;
     padding:0;
+  transition: all 0.20s linear;
   }
   
   html {
@@ -199,12 +201,26 @@ export const GlobalStyles = createGlobalStyle`
   min-width:320px;
   font-size:62.5%;
   scroll-behavior:smooth;
+
   }
 
   body {
     background-color: ${props => props.theme.background};
     transition: all 0.50s linear;
+    scrollbar-color: ${props => props.theme.thirdColor} ${props => props.theme.firstColor};
+    scrollbar-width: thin;
   }
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: ${props => props.theme.background};
+    border-radius: 4px;
+ }
+ body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
+
 
   a {
   color:inherit;

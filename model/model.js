@@ -14,4 +14,4 @@ const messageSchema = new mongoose.Schema({
   date: Date
 });
 
-module.exports = mongoose.models.Message || mongoose.model('Message', messageSchema);;
+module.exports = mongoose.models.Message || mongoose.model('Message', messageSchema);

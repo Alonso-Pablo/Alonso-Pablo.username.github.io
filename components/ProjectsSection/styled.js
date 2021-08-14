@@ -40,6 +40,11 @@ export const Container = styled.ul`
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  & li {
+    min-width: 150px;
+    margin: 30px;
+  }
 `;
 
 export const Item = styled.a`

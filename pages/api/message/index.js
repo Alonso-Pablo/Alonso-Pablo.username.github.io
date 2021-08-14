@@ -27,12 +27,10 @@ export default async (req, res) => {
         "success": false
       });
     };
+  }
 
-  } else {
-    res.status(400).send({
-      "error": "You shall not pass",
-      "success": false
-    });
-  };
-
+  res.status(400).send({
+    "error": "You shall not pass",
+    "success": false
+  });
 };
