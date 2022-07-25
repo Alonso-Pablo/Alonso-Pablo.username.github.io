@@ -12,10 +12,10 @@ export default function AboutMeSection() {
           <Paragraph>I live in Argentina, Buenos Aires. UTC/GMT (-03:00)</Paragraph>
         </div>
         <Br>
-          <Paragraph>I like make awesome thing with Javascript and other programming languages.</Paragraph>
+          <Paragraph>I like make awesome things with JavaScript and other programming languages.</Paragraph>
         </Br>
         <Br>
-          <Paragraph>I never stop learging new thing,</Paragraph>
+          <Paragraph>I never stop learning new things,</Paragraph>
           <ParagraphGray>Platzi, Medium, Stack Overflow and Documentation.</ParagraphGray>
         </Br>
         <Br>

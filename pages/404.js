@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { Footer } from '../components';
 import Link from 'next/link'
 import styled, { ThemeProvider } from 'styled-components';
@@ -6,6 +7,11 @@ import { GlobalStyles, darkTheme } from "../styles/GlobalStyle"
 export default function Custom404() {
   return (
     <>
+      <Head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap" rel="stylesheet"/>
+        <link rel="icon" href='/favicon.svg' />
+      </Head>
     <ThemeProvider theme={ darkTheme }>
       <GlobalStyles />
       <Section>
@@ -34,11 +40,8 @@ export default function Custom404() {
         </ResponsiveContainer>
       </Section>
 
-      {/* <NotFound/> */}
-
       <Footer/>
       </ThemeProvider>
-    
     </>
   );
 };

@@ -1,3 +1,5 @@
+import Head from 'next/head';
+import IndexPage from '../components/IndexPage/IndexPage';
 import { Introduction, SectionResponsiveContainer, ProjectsSection, AboutMeSection, ContactMeSection, Footer } from '../components'
 
 import useWindowSize from '../Hooks/useWindowSize';
@@ -61,6 +63,12 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <IndexPage />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap" rel="stylesheet"/>
+        <link rel="icon" href='/favicon.svg' />
+      </Head>
       <ThemeProvider theme={ theme === 'light' ? lightTheme : darkTheme  }>
         <GlobalStyles />
 

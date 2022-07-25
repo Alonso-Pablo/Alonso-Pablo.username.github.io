@@ -116,7 +116,10 @@ export default function ContactMe() {
 
       { sentInfo.error
           ? <ContainerMessage aria-live="assertive" initial="hidden" animate="visible" variants={alertMessage}>
-            <Message>Bad Request. ❌</Message>
+            <Message>
+              Looks like someone unplugged the phone... ❌<br/>
+              Try to send me a message on Linkedin.
+            </Message>
         </ContainerMessage>
           : <> </> 
       }
