@@ -66,8 +66,8 @@ export default function ContactMe() {
       "message": `${e.target.message.value}`
     };
 
-    // fetchPostDataMessage(`http://localhost:3000/api/message`, dataMessage) // dev
-    fetchPostDataMessage(`https://alonso-pablo.vercel.app/api/message`, dataMessage)
+    fetchPostDataMessage(`http://localhost:3000/api/message`, dataMessage) // dev
+    // fetchPostDataMessage(`https://alonso-pablo.vercel.app/api/message`, dataMessage)
       .then(data => {
         
         if (data.error === true) return setSentInfo( sentInfo = 

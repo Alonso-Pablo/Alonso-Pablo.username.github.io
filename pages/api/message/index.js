@@ -15,22 +15,22 @@ export default async (req, res) => {
 
       const message = await Model.create(fullMessage);
 
-      res.status(201).send({
+      res.status(201).json({
         "error": false,
         "success": true,
         "data": message
       });
 
     } catch (err) {
-      res.status(400).send({
+      res.status(400).json({
         "error": "Bad request",
         "success": false
       });
     };
+  } else {
+    res.status(400).send({
+      "error": "You shall not pass",
+      "success": false
+    });
   }
-
-  res.status(400).send({
-    "error": "You shall not pass",
-    "success": false
-  });
 };
